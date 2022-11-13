@@ -40,7 +40,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XoI-kl-CWg">
-                                <rect key="frame" x="100" y="231" width="190" height="35"/>
+                                <rect key="frame" x="100" y="321" width="190" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="segue">
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -50,26 +50,35 @@
                                     <segue destination="XCs-ht-Tm6" kind="show" identifier="toEditScreen" id="clP-4p-SLM"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="send segue" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hhm-eu-j09">
+                                <rect key="frame" x="100" y="249" width="190" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemMintColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XU7-iZ-Xeo" secondAttribute="trailing" constant="30" id="2ut-2n-xaZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XoI-kl-CWg" secondAttribute="trailing" constant="100" id="3hu-Q1-iFy"/>
+                            <constraint firstItem="hhm-eu-j09" firstAttribute="top" secondItem="d0o-ga-W2K" secondAttribute="bottom" constant="45" id="5zJ-VN-JLO"/>
                             <constraint firstItem="XU7-iZ-Xeo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9JG-al-lxQ"/>
                             <constraint firstItem="XU7-iZ-Xeo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Aht-Z9-Ay7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="d0o-ga-W2K" secondAttribute="trailing" constant="100" id="AlO-DH-K6B"/>
                             <constraint firstItem="d0o-ga-W2K" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GPq-Yr-sTQ"/>
+                            <constraint firstItem="hhm-eu-j09" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="N3t-UV-czX"/>
                             <constraint firstItem="XoI-kl-CWg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="OXQ-Cv-aW9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hhm-eu-j09" secondAttribute="trailing" constant="100" id="RCL-gt-s07"/>
                             <constraint firstItem="d0o-ga-W2K" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="gBe-Ne-gnZ"/>
+                            <constraint firstItem="XoI-kl-CWg" firstAttribute="top" secondItem="hhm-eu-j09" secondAttribute="bottom" constant="38" id="mLI-dq-73l"/>
                             <constraint firstItem="d0o-ga-W2K" firstAttribute="top" secondItem="XU7-iZ-Xeo" secondAttribute="bottom" constant="36.670000000000002" id="ppN-MA-d0Z"/>
-                            <constraint firstItem="XoI-kl-CWg" firstAttribute="top" secondItem="d0o-ga-W2K" secondAttribute="bottom" constant="27" id="tvX-nJ-ixn"/>
                             <constraint firstItem="XU7-iZ-Xeo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="41" id="yqd-yz-CeC"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Blue scene" id="vXy-fv-hgJ"/>
                     <connections>
                         <outlet property="dataLabel" destination="XU7-iZ-Xeo" id="Wxp-SN-4oa"/>
+                        <outlet property="textField" destination="hhm-eu-j09" id="w1L-bo-y9R"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -90,23 +99,40 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e17-3K-SqJ">
-                                <rect key="frame" x="144" y="352" width="116" height="35"/>
+                                <rect key="frame" x="100" y="352" width="190" height="35"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="send back"/>
+                                <buttonConfiguration key="configuration" style="gray" title="send back">
+                                    <color key="baseForegroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                    <color key="baseBackgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="saveDataWithProperty:" destination="XCs-ht-Tm6" eventType="touchUpInside" id="gBz-0H-Gb0"/>
                                     <segue destination="BYZ-38-t0r" kind="show" id="zXT-Zn-XtY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LTa-zP-W7c">
+                                <rect key="frame" x="100" y="407" width="190" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="unwind">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="uxf-52-vGo" kind="unwind" unwindAction="unwindToFirstScreen:" id="e9V-fY-A9N"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Da9-TK-IwS"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                         <constraints>
-                            <constraint firstItem="Da9-TK-IwS" firstAttribute="trailing" secondItem="e17-3K-SqJ" secondAttribute="trailing" constant="130" id="CGb-6f-FPV"/>
+                            <constraint firstItem="Da9-TK-IwS" firstAttribute="trailing" secondItem="LTa-zP-W7c" secondAttribute="trailing" constant="100" id="6kT-Fd-Zrg"/>
+                            <constraint firstItem="LTa-zP-W7c" firstAttribute="top" secondItem="e17-3K-SqJ" secondAttribute="bottom" constant="20" id="8zW-2n-aW1"/>
                             <constraint firstItem="2zH-5u-8A3" firstAttribute="top" secondItem="Da9-TK-IwS" secondAttribute="top" constant="246" id="SsY-s4-zg7"/>
                             <constraint firstItem="2zH-5u-8A3" firstAttribute="leading" secondItem="Da9-TK-IwS" secondAttribute="leading" constant="30" id="YEI-GY-N2J"/>
+                            <constraint firstItem="e17-3K-SqJ" firstAttribute="leading" secondItem="Da9-TK-IwS" secondAttribute="leading" constant="100" id="bW9-2j-wqK"/>
                             <constraint firstItem="e17-3K-SqJ" firstAttribute="top" secondItem="2zH-5u-8A3" secondAttribute="bottom" constant="25" id="dpO-dL-OSl"/>
-                            <constraint firstItem="e17-3K-SqJ" firstAttribute="leading" secondItem="Da9-TK-IwS" secondAttribute="leading" constant="144" id="j2b-JS-8QL"/>
+                            <constraint firstItem="Da9-TK-IwS" firstAttribute="trailing" secondItem="e17-3K-SqJ" secondAttribute="trailing" constant="100" id="g3M-HW-QB0"/>
+                            <constraint firstItem="LTa-zP-W7c" firstAttribute="leading" secondItem="Da9-TK-IwS" secondAttribute="leading" constant="100" id="kcF-29-8Wa"/>
                             <constraint firstItem="Da9-TK-IwS" firstAttribute="trailing" secondItem="2zH-5u-8A3" secondAttribute="trailing" constant="30" id="nwd-kF-aR7"/>
                         </constraints>
                     </view>
@@ -116,8 +142,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ipk-zB-Et4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="uxf-52-vGo" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2051" y="784"/>
+            <point key="canvasLocation" x="2049.2307692307691" y="783.41232227488149"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YNm-LK-GCs">
@@ -139,10 +166,12 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="clP-4p-SLM"/>
         <segue reference="zXT-Zn-XtY"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

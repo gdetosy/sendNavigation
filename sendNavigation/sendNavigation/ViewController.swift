@@ -8,9 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-  
-    @IBOutlet weak var dataLabel: UILabel!
+    @IBOutlet var dataLabel: UILabel!
     
     @IBAction func editDataWithProperty(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -19,22 +17,17 @@ class ViewController: UIViewController {
         self.navigationController?.pushViewController(editScreen, animated: true)
     }
     
-    var updatedData: String = "ddddd"
+    var updatedData: String = "start"
     override func viewWillAppear(_ animated: Bool) { super.viewWillAppear(animated); updateLabel(withText: updatedData)
     }
     
     private func updateLabel(withText text: String) {
         dataLabel.text = updatedData
     }
-   
     
-   
+    @IBOutlet var textField: UITextField!
     
-    
-    
-    
-    
-//    MARK: seugue
+    //    MARK: seugue
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
@@ -42,16 +35,19 @@ class ViewController: UIViewController {
         default: break
         }
     }
-        func prepareEditScreen(_ segue: UIStoryboardSegue) {
-            guard let destinationController = segue.destination as? SecondViewController else {
-                return
-            }
-            destinationController.updatingData = dataLabel.text ?? " "
-        }
-            override func viewDidLoad() {
-                super.viewDidLoad()
-                // Do any additional setup after loading the view.
-            }
-        }
-    
 
+    func prepareEditScreen(_ segue: UIStoryboardSegue) {
+        guard let destinationController = segue.destination as? SecondViewController else {
+            return
+        }
+        destinationController.updatingData = textField.text ?? " "
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+    }
+
+    @IBAction func unwindToFirstScreen(_ segue: UIStoryboardSegue) {}
+}
+    

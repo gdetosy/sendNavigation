@@ -16,14 +16,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="root" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XU7-iZ-Xeo">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XU7-iZ-Xeo">
                                 <rect key="frame" x="30" y="88" width="330" height="44.333333333333343"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
-                                <nil key="textColor"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="root">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="37"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d0o-ga-W2K">
-                                <rect key="frame" x="164" y="169" width="62" height="35"/>
+                                <rect key="frame" x="100" y="169" width="190" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="send">
                                     <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
@@ -33,23 +39,37 @@
                                     <action selector="editDataWithProperty:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pfI-7C-61h"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XoI-kl-CWg">
+                                <rect key="frame" x="100" y="231" width="190" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="segue">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="XCs-ht-Tm6" kind="show" identifier="toEditScreen" id="clP-4p-SLM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemMintColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XU7-iZ-Xeo" secondAttribute="trailing" constant="30" id="2ut-2n-xaZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XoI-kl-CWg" secondAttribute="trailing" constant="100" id="3hu-Q1-iFy"/>
                             <constraint firstItem="XU7-iZ-Xeo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9JG-al-lxQ"/>
                             <constraint firstItem="XU7-iZ-Xeo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Aht-Z9-Ay7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="d0o-ga-W2K" secondAttribute="trailing" constant="100" id="AlO-DH-K6B"/>
                             <constraint firstItem="d0o-ga-W2K" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GPq-Yr-sTQ"/>
-                            <constraint firstItem="d0o-ga-W2K" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="164" id="RCJ-qi-Dtj"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="d0o-ga-W2K" secondAttribute="trailing" constant="164" id="iYN-kI-Xbw"/>
+                            <constraint firstItem="XoI-kl-CWg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="OXQ-Cv-aW9"/>
+                            <constraint firstItem="d0o-ga-W2K" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="gBe-Ne-gnZ"/>
                             <constraint firstItem="d0o-ga-W2K" firstAttribute="top" secondItem="XU7-iZ-Xeo" secondAttribute="bottom" constant="36.670000000000002" id="ppN-MA-d0Z"/>
+                            <constraint firstItem="XoI-kl-CWg" firstAttribute="top" secondItem="d0o-ga-W2K" secondAttribute="bottom" constant="27" id="tvX-nJ-ixn"/>
                             <constraint firstItem="XU7-iZ-Xeo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="41" id="yqd-yz-CeC"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Blue scene" id="vXy-fv-hgJ"/>
                     <connections>
-                        <outlet property="dataLabel" destination="XU7-iZ-Xeo" id="Igr-Ul-oEw"/>
+                        <outlet property="dataLabel" destination="XU7-iZ-Xeo" id="Wxp-SN-4oa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -61,10 +81,10 @@
             <objects>
                 <viewController storyboardIdentifier="SecondViewController" id="XCs-ht-Tm6" customClass="SecondViewController" customModule="sendNavigation" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PCT-Oo-SqU">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2zH-5u-8A3">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="введите текст" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2zH-5u-8A3">
                                 <rect key="frame" x="30" y="293" width="330" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -90,13 +110,14 @@
                             <constraint firstItem="Da9-TK-IwS" firstAttribute="trailing" secondItem="2zH-5u-8A3" secondAttribute="trailing" constant="30" id="nwd-kF-aR7"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="LjC-vX-Ssz"/>
                     <connections>
                         <outlet property="dataTextField" destination="2zH-5u-8A3" id="loN-6S-lWm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ipk-zB-Et4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="269" y="644"/>
+            <point key="canvasLocation" x="2051" y="784"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YNm-LK-GCs">
@@ -118,6 +139,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="clP-4p-SLM"/>
         <segue reference="zXT-Zn-XtY"/>
     </inferredMetricsTieBreakers>
     <resources>

@@ -8,25 +8,27 @@
 import UIKit
 
 class SecondViewController: UIViewController {
-    var updatingData: String = ""
     @IBOutlet var dataTextField: UITextField!
+    var updatingData: String = ""
+    override func viewWillAppear(_ animated: Bool) { super.viewWillAppear(animated)
+        updateTextFieldData(withText: updatingData)
+    }
+
+    private func updateTextFieldData(withText text: String) {
+        dataTextField.text = text
+    }
     
     @IBAction func saveDataWithProperty(_ sender: UIButton) {
         self.navigationController?.viewControllers.forEach { viewController in
             (viewController as? ViewController)?.updatedData = dataTextField.text ?? ""
-            }
+        }
 //        let storyboard = UIStoryboard(name: "Main", bundle: nil)
 //        let editScreen = storyboard.instantiateViewController(withIdentifier:
 //        "ViewController") as! ViewController
 //
 //        navigationController?.pushViewController(editScreen, animated: true)
 //
-        
     }
-    
-    
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,5 +53,4 @@ class SecondViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }

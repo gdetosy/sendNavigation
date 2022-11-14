@@ -55,10 +55,19 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chu-xs-0P8">
+                                <rect key="frame" x="100" y="394" width="190" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Xib"/>
+                                <connections>
+                                    <action selector="xibButtonSend:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nwy-kN-pK2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemMintColor"/>
                         <constraints>
+                            <constraint firstItem="chu-xs-0P8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="1LE-Re-LyH"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XU7-iZ-Xeo" secondAttribute="trailing" constant="30" id="2ut-2n-xaZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XoI-kl-CWg" secondAttribute="trailing" constant="100" id="3hu-Q1-iFy"/>
                             <constraint firstItem="hhm-eu-j09" firstAttribute="top" secondItem="d0o-ga-W2K" secondAttribute="bottom" constant="45" id="5zJ-VN-JLO"/>
@@ -67,8 +76,10 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="d0o-ga-W2K" secondAttribute="trailing" constant="100" id="AlO-DH-K6B"/>
                             <constraint firstItem="d0o-ga-W2K" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GPq-Yr-sTQ"/>
                             <constraint firstItem="hhm-eu-j09" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="N3t-UV-czX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="chu-xs-0P8" secondAttribute="trailing" constant="100" id="OKe-9Z-WD1"/>
                             <constraint firstItem="XoI-kl-CWg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="OXQ-Cv-aW9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hhm-eu-j09" secondAttribute="trailing" constant="100" id="RCL-gt-s07"/>
+                            <constraint firstItem="chu-xs-0P8" firstAttribute="top" secondItem="XoI-kl-CWg" secondAttribute="bottom" constant="38" id="aFy-ZD-umy"/>
                             <constraint firstItem="d0o-ga-W2K" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="gBe-Ne-gnZ"/>
                             <constraint firstItem="XoI-kl-CWg" firstAttribute="top" secondItem="hhm-eu-j09" secondAttribute="bottom" constant="38" id="mLI-dq-73l"/>
                             <constraint firstItem="d0o-ga-W2K" firstAttribute="top" secondItem="XU7-iZ-Xeo" secondAttribute="bottom" constant="36.670000000000002" id="ppN-MA-d0Z"/>
@@ -166,6 +177,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="clP-4p-SLM"/>
         <segue reference="zXT-Zn-XtY"/>
     </inferredMetricsTieBreakers>
     <resources>

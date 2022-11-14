@@ -47,14 +47,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
+//MARK: XIB
     @IBAction func xibButtonSend(_ sender: Any) {
         let navi = XibViewController(nibName: "XibViewController", bundle: nil)
         navi.dataString = textField.text
 
         navigationController?.pushViewController(navi, animated: true)
     }
-
+// MARK: unwind
     @IBAction func unwindToFirstScreen(_ segue: UIStoryboardSegue) {}
 }
     

@@ -10,7 +10,7 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet var dataLabel: UILabel!
     
-    @IBAction func editDataWithProperty(_ sender: UIButton) {
+    @IBAction private func editDataWithProperty(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let editScreen = storyboard.instantiateViewController(withIdentifier: "SecondViewController") as! SecondViewController
         editScreen.updatingData = dataLabel.text ?? " "
@@ -36,7 +36,7 @@ class ViewController: UIViewController {
         }
     }
 
-    func prepareEditScreen(_ segue: UIStoryboardSegue) {
+    private func prepareEditScreen(_ segue: UIStoryboardSegue) {
         guard let destinationController = segue.destination as? SecondViewController else {
             return
         }
@@ -47,14 +47,18 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-//MARK: XIB
-    @IBAction func xibButtonSend(_ sender: Any) {
+
+    // MARK: XIB
+
+    @IBAction private func xibButtonSend(_ sender: Any) {
         let navi = XibViewController(nibName: "XibViewController", bundle: nil)
         navi.dataString = textField.text
 
         navigationController?.pushViewController(navi, animated: true)
     }
-// MARK: unwind
-    @IBAction func unwindToFirstScreen(_ segue: UIStoryboardSegue) {}
+
+    // MARK: unwind
+
+    @IBAction private func unwindToFirstScreen(_ segue: UIStoryboardSegue) {}
 }
     

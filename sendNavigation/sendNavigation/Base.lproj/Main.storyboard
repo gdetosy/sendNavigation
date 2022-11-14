@@ -13,11 +13,11 @@
             <objects>
                 <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="sendNavigation" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XU7-iZ-Xeo">
-                                <rect key="frame" x="30" y="88" width="330" height="44.333333333333343"/>
+                                <rect key="frame" x="30" y="132" width="330" height="44.333333333333343"/>
                                 <attributedString key="attributedText">
                                     <fragment content="root">
                                         <attributes>
@@ -29,7 +29,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d0o-ga-W2K">
-                                <rect key="frame" x="100" y="169" width="190" height="35"/>
+                                <rect key="frame" x="100" y="213" width="190" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="send">
                                     <color key="baseForegroundColor" systemColor="systemBackgroundColor"/>
@@ -40,7 +40,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XoI-kl-CWg">
-                                <rect key="frame" x="100" y="321" width="190" height="35"/>
+                                <rect key="frame" x="100" y="365" width="190" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="segue">
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -51,12 +51,12 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="print for segue or xib" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hhm-eu-j09">
-                                <rect key="frame" x="100" y="249" width="190" height="34"/>
+                                <rect key="frame" x="100" y="293" width="190" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chu-xs-0P8">
-                                <rect key="frame" x="100" y="394" width="190" height="35"/>
+                                <rect key="frame" x="100" y="438" width="190" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Xib"/>
                                 <connections>
@@ -101,16 +101,16 @@
             <objects>
                 <viewController storyboardIdentifier="SecondViewController" id="XCs-ht-Tm6" customClass="SecondViewController" customModule="sendNavigation" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PCT-Oo-SqU">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="введите текст" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2zH-5u-8A3">
-                                <rect key="frame" x="30" y="293" width="330" height="34"/>
+                                <rect key="frame" x="30" y="337" width="330" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e17-3K-SqJ">
-                                <rect key="frame" x="100" y="352" width="190" height="35"/>
+                                <rect key="frame" x="100" y="396" width="190" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="send back">
                                     <color key="baseForegroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
@@ -122,7 +122,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LTa-zP-W7c">
-                                <rect key="frame" x="100" y="407" width="190" height="35"/>
+                                <rect key="frame" x="100" y="451" width="190" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="unwind">
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -157,14 +157,17 @@
             </objects>
             <point key="canvasLocation" x="2049.2307692307691" y="783.41232227488149"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--first-->
         <scene sceneID="YNm-LK-GCs">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oOD-kW-hvX" sceneMemberID="viewController">
+                <navigationController title="first" automaticallyAdjustsScrollViewInsets="NO" id="oOD-kW-hvX" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bmI-aa-moa">
                         <rect key="frame" x="0.0" y="47" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" systemColor="labelColor"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -177,10 +180,12 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="clP-4p-SLM"/>
-        <segue reference="zXT-Zn-XtY"/>
+        <segue reference="R70-qm-LNP"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="secondarySystemGroupedBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

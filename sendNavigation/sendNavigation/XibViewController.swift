@@ -9,13 +9,13 @@ import UIKit
 
 class XibViewController: UIViewController {
     var dataString: String?
-    
+
     @IBOutlet var labelXib: UILabel!
-    
+
     @IBAction private func buttonBackXib(_ sender: UIButton) {
         navigationController?.popToRootViewController(animated: true)
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         labelXib.text = dataString
